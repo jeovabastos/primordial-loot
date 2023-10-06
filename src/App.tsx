@@ -11,14 +11,11 @@ function App() {
       <Header/>
 
       <div className='flex'>
-        {/* Aside */}
         <Aside/>
 
         <main className='flex flex-col flex-1'>
-          {/* Categories */}
           <Categories/>
 
-          {/* Products */}
           <Products/>
         </main>
       </div>
