@@ -1,12 +1,7 @@
-import { useState } from "react"
 
-export function Header() {
-    const [cartValue, setCartValue] = useState<number>(0)
 
-    function handleClickCartValue() {
-        setCartValue(cartValue + 1)
-    }
 
+export function Header({cartValue}:{cartValue:any}) {
 
     return (
         <header className='bg-red-500 flex justify-between items-center px-8 gap-8 py-2'>
@@ -18,7 +13,7 @@ export function Header() {
             </div>
 
             <div className=''>
-                <button className='p-2 text-gray-50 font-semibold' onClick={() => handleClickCartValue()}>Login</button>
+                <button className='p-2 text-gray-50 font-semibold'>Login</button>
                 <button className='p-2 text-gray-50 font-semibold'>Cart {cartValue}</button>
             </div>
         </header>
