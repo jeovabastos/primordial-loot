@@ -1,6 +1,6 @@
 export function CategoryItem({source, title}:{source:string, title:string}){
     return(
-        <div className='bg-white flex flex-col border border-solid rounded-xl w-32 h-32'>
+        <div className='hover:cursor-pointer hover:bg-red-500 hover:text-white bg-white flex flex-col border border-solid rounded-xl w-32 h-32'>
             <img className='rounded-t-xl block w-32 h-24' src={source} alt='IMG'/>
 
             <div className="flex flex-1 justify-center px-2">
