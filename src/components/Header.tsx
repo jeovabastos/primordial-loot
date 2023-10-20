@@ -11,6 +11,7 @@ export function Header({cartValue}:{cartValue:any}) {
     const [cartArea, setCartArea] = useState(cartState = "hidden")
 
     function toggleCartArea(){
+        console.log(cartState)
         if(cartArea==='hidden'){
             setCartArea(cartState = " ")
         }else{
