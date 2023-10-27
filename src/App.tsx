@@ -6,20 +6,39 @@ import { Aside } from './components/Aside'
 import { useState } from 'react'
 
 function App() {
+
+    // CART value 
     const [cartValue, setCartValue] = useState<number>(0)
     
     function handleClickCartValue() {
         setCartValue(cartValue + 1)
     }
+    // 
+
+    // ASIDE area function
+    type asideType = 'hidden' | ' '
+    let asideState: asideType
+
+    const [asideArea, setAsideArea] = useState(asideState = 'hidden')
+
+    function toggleAsideArea(){
+        console.log(asideState)
+        if(asideArea==='hidden'){
+            setAsideArea(asideState = " ")
+        }else{
+            setAsideArea(asideState = "hidden")
+        }
+    }
+    //
 
   return (
     <>
-      <Header cartValue={cartValue}/>
+      <Header cartValue={cartValue} toggleAsideArea={toggleAsideArea}/>
 
       <div className='flex'>
-        <Aside/>
+        <Aside asideArea={asideArea}/>
 
-        <main className='flex flex-col flex-1'>
+        <main className='flex flex-col'>
           <Categories/>
 
           <Products handleClickCartValue={handleClickCartValue}/>
