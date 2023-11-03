@@ -8,11 +8,11 @@ import { useState } from 'react'
 function App() {
 
     // CART value 
-    const [cartValue, setCartValue] = useState<number>(0)
-    
-    function handleClickCartValue() {
-        setCartValue(cartValue + 1)
-    }
+    //const [cartValue, setCartValue] = useState<number>(0)
+    //
+    //function handleClickCartValue() {
+    //    setCartValue(cartValue + 1)
+    //}
     // 
 
     // ASIDE area function
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <>
-      <Header cartValue={cartValue} toggleAsideArea={toggleAsideArea}/>
+      <Header toggleAsideArea={toggleAsideArea}/>
 
       <div className='flex'>
         <Aside asideArea={asideArea}/>
