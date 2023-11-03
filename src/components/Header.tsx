@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux/es/hooks/useSelector'
 import { useItems } from '../redux/sliceItems'
 // 
 
-export function Header({cartValue, toggleAsideArea}:{cartValue:any, toggleAsideArea:any}) {
+export function Header({toggleAsideArea}:{toggleAsideArea:any}) {
 
     // REDUX CONFIGURATION 
     const items = useSelector(useItems)
@@ -35,7 +35,7 @@ export function Header({cartValue, toggleAsideArea}:{cartValue:any, toggleAsideA
                     
                     <h1 className='lg:left-0 lg:absolute text-3xl p-2 text-gray-50'>Primordial Loot</h1>
 
-                    <button onClick={()=>toggleCartArea()} className='lg:hidden p-2 text-gray-50 font-semibold'>Cart {cartValue}</button>
+                    <button onClick={()=>toggleCartArea()} className='lg:hidden p-2 text-gray-50 font-semibold'>Cart</button>
                 </div>
 
                 <div className='flex p-2 lg:w-[600px]'>
