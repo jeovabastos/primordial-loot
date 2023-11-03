@@ -43,7 +43,7 @@ export function Header({toggleAsideArea}:{toggleAsideArea:any}) {
                     <img className='cursor-pointer rounded-r-full p-1 bg-gray-50 border border-solid block w-8 h-8' src='/lupa.png' />
                 </div>
                 
-                <button onClick={()=>toggleCartArea()} className='hidden lg:block p-2 text-gray-50 font-semibold'>Cart {cartValue}</button>
+                <button onClick={()=>toggleCartArea()} className='hidden lg:block p-2 text-gray-50 font-semibold'>Cart</button>
             </header>
             
             {/* Cart ASIDE area itself */}
