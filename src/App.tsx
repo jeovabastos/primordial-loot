@@ -41,7 +41,7 @@ function App() {
         <main className='flex flex-col'>
           <Categories/>
 
-          <Products handleClickCartValue={handleClickCartValue}/>
+          <Products/>
         </main>
       </div>
     </>

@@ -1,8 +1,15 @@
 import { useState } from "react"
 
-
+// REDUX CONFIGURATION
+import { useSelector } from 'react-redux/es/hooks/useSelector'
+import { useItems } from '../redux/sliceItems'
+// 
 
 export function Header({cartValue, toggleAsideArea}:{cartValue:any, toggleAsideArea:any}) {
+
+    // REDUX CONFIGURATION 
+    const items = useSelector(useItems)
+    // 
     
     // Cart ASIDE area function
     type cartType = 'hidden' | ' '
@@ -26,7 +33,7 @@ export function Header({cartValue, toggleAsideArea}:{cartValue:any, toggleAsideA
                 <div className="flex justify-evenly flex-1 items-center">
                     <button onClick={()=>toggleAsideArea()} className='lg:hidden p-2 text-gray-50 text-2xl font-normal'>+</button>
                     
-                    <h1 className='text-3xl p-2 text-gray-50'>Primordial Loot</h1>
+                    <h1 className='lg:left-0 lg:absolute text-3xl p-2 text-gray-50'>Primordial Loot</h1>
 
                     <button onClick={()=>toggleCartArea()} className='lg:hidden p-2 text-gray-50 font-semibold'>Cart {cartValue}</button>
                 </div>
@@ -41,7 +48,13 @@ export function Header({cartValue, toggleAsideArea}:{cartValue:any, toggleAsideA
             
             {/* Cart ASIDE area itself */}
             <div className={cartArea+" z-10 border-t-2 border-black absolute right-0 w-[75%] lg:w-[25%] h-full bg-red-500"}>
-                <h1 className="p-2 text-gray-50">Test</h1>   
+                
+                {/* ADD THE CART ITEMS HEREEEEEEEEEEEEEEEEEE */}
+                <div>
+                    {items.map(item=>{
+                        return <div key={item.title+Math.random()}>{item.title}</div>
+                    })}
+                </div>
             </div>
             {/*  */}
         </>
