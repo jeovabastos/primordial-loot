@@ -15,11 +15,13 @@ export function ProductItem(
 
             <div className='h-full  p-2 gap-2 bg-gray-50'>
                 <h2 className="font-semibold">{title}</h2>
+                
                 <div>
                     <p>R$<span className="font-bold text-xl">{price}</span></p>
                     <p className="text-sm">{text}</p>
                 </div>
-                <button onClick={()=>dispacth(addItems(title))} className="bg-gray-200 px-2 hover:bg-red-500 hover:text-white">Add to cart</button>
+
+                <button onClick={()=>dispacth(addItems({title,price,text,source}))} className="bg-gray-200 px-2 hover:bg-red-500 hover:text-white">Add to cart</button>
             </div>
         </div>        
     )

@@ -50,9 +50,9 @@ export function Header({toggleAsideArea}:{toggleAsideArea:any}) {
             <div className={cartArea+" z-10 border-t-2 border-black absolute right-0 w-[75%] lg:w-[25%] h-full bg-red-500"}>
                 
                 {/* ADD THE CART ITEMS HEREEEEEEEEEEEEEEEEEE */}
-                <div>
+                <div className="h-full absolute overflow-y-scroll">
                     {items.map(item=>{
-                        return <div key={item.title+Math.random()}>{item.title}</div>
+                        return <div className="flex flex-col p-2 text-white text-lg" key={item.title+Math.random()}><img className="w-[160px] lg:w-[80px]" src={item.source}/>{item.title +' '+ item.price +' '+ item.text}</div>
                     })}
                 </div>
             </div>
